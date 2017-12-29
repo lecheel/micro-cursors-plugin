@@ -2,14 +2,10 @@ local module = {}
 local cursors = {}
 module.path = os.getenv('HOME') .. '/.microinfo'
 
-function debug(log)
-    messenger:Message(log)
-end
+-- ref from https://github.com/erf/vis-cursors
 
-function set_cursor_pos()
-        --local pos = cursors[view.Buf.AbsPath]
-        if pos == nil then return end
-        view.Cursor.Y = tonumber(pos)
+function debug(log)
+    -- messenger:Message(log)
 end
 
 function load_cursors(view)
